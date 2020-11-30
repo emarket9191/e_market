@@ -7,6 +7,8 @@ router.post('/', userCtrl.createUser)
 // router.get('/',userCtrl.getAllCustomers)
 // router.put('/:id',userCtrl.updateCustomer)
  router.delete('/:id',userCtrl.deleteUser)
+ router.put('/:id',userCtrl.updateUser)
+ router.get('/:id', userCtrl.getUserById)
 // router.get('/name/:id',userCtrl.getCustomerById)
 // router.get('/:id',userCtrl.getLectureByCustomerId)
 module.exports = router;

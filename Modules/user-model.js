@@ -3,12 +3,30 @@ const schema = mongoose.Schema
 const ObjectId = require('mongoose').Types.ObjectId;
 const user = new schema(
     {
-    shop_Name:{type:String,required:true},
-    brief_description :{type:String,required:true},
-    serviceSupplier: { type: String, required: true },
-    colorAbove: { type: String, required: true },
-    subjectID: { type: String, required: true },
-   
+    first_Name:{type:String,required:true},
+    last_Name :{type:String,required:true},
+    user_Name : {type:String,required:true},
+    gender : {type:String},
+    birthday : {type:Date},
+    profileImage : { type: String,required: true},
+    business_name :{type:String,required:true},
+    password :{type:String,required:true},
+    email: {
+        type: String,
+        required: true}
+    /*email: {
+        type: String,
+        required: true,
+        unique: true,
+        lowercase: true,
+        validate: (value) => {
+          if (!validator.isEmail(value)) {
+            throw new Error({ error: "Invalid Email address" });
+          }
+        },
+      },
+      
+*/
 },
 {timestamps:true},
 
