@@ -3,8 +3,12 @@ const schema = mongoose.Schema
 const ObjectId = require('mongoose').Types.ObjectId;
 const user = new schema(
     {
-    first_Name:{type:String,required:true},
-    last_Name :{type:String,required:true}
+    shop_Name:{type:String,required:true},
+    brief_description :{type:String,required:true},
+    serviceSupplier: { type: String, required: true },
+    colorAbove: { type: String, required: true },
+    subjectID: { type: String, required: true },
+   
 },
 {timestamps:true},
 
