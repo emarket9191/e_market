@@ -9,7 +9,7 @@ const user = new schema(
     gender : {type:String},
     birthday : {type:Date},
     profileImage : { type: String,required: true},
-    business_name :{type:String},
+    business_name :{type:String,required:true},
     password :{type:String,required:true},
     email:{type:String,required:true}
 
