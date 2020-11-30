@@ -10,13 +10,8 @@
     "dotenv": "^8.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-<<<<<<< HEAD
-    "react-scripts": "3.4.3",
-    "validator": "^13.5.1"
-=======
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
->>>>>>> 40100bf916b31cfb3f19c3055b120b4e668cf23f
   },
   "scripts": {
     "start": "react-scripts start",
