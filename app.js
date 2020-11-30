@@ -5,8 +5,9 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var cors = require("cors");
 
-var indexRouter = require("./routes/index");
-var userRouter = require("./routes/user-route");
+var indexRouter = require('./routes/index');
+var userRouter = require('./routes/user-route');
+var shopRouter = require ('./routes/shop-route');
 var productRouter = require("./routes/product-route");
 
 var db = require("./DB/app");
@@ -31,8 +32,9 @@ app.use(express.static(path.join(__dirname, "public")));
 // Added to serve client static files
 app.use(express.static(path.resolve(__dirname, "client/build")));
 
-app.use("/", indexRouter);
-app.use("/api/user", userRouter);
+app.use('/', indexRouter);
+app.use('/api/user', userRouter);
+app.use('/api/shop', shopRouter);
 app.use("/api",productRouter);
 
 // catch 404 and forward to error handler
