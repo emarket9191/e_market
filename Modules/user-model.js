@@ -14,5 +14,11 @@ const user = new schema(
 
 
 )
+user.virtual('shops', {
+    ref: 'shop', 
+    localField: '_id', 
+    foreignField: 'shop_id', 
+  
+});
 
 module.exports = mongoose.model("users", user)

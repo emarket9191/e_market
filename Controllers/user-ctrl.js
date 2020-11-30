@@ -45,7 +45,7 @@ createUser = (req, res) => {
       return res.status(200).json({ success: true, data: user });
     }).catch((err) => console.log(err));
   };
-
+  
   module.exports = {
     createUser,
     deleteUser
