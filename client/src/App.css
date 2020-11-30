@@ -1,18 +1,59 @@
 .App {
   text-align: center;
 }
+.ProductManagementTitle{
+  margin-bottom: 1%;
+}
+.ProductContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 75%;
+  margin: 0 auto;}
 
+th{
+  padding-left:1px !important; 
+  padding-right:1px !important;
+  text-align: center !important;
+}
+.TablePagination{
+  right: 30% !important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+.ProductButtonContainer{
+  margin-bottom: 1.5%;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.MuiTablePagination-toolbar {
+  min-height: 52px;
+  padding-right: 32% !important;
+}
+.PaginationContainer{
+  display: flex;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+}
+#archiveFeedback{
+  align-self: center;
+  align-items: flex-end;
+  margin-left: 3%;
+  margin-right: 15%;
+}
+#ProductGoToPage{
+  margin-bottom: 1.5%;
+}
+#productFeedback{
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -27,7 +68,13 @@
 .App-link {
   color: #61dafb;
 }
-
+.GreyButton{
+  color:white !important;
+  background-color: rgb(117, 114, 114) !important;
+}
+#AddProductButton{
+  margin-left:5%;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
