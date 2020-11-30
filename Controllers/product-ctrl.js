@@ -52,7 +52,7 @@ const deleteProduct = async (req, res) => {
 //   product
 //     .updateOne({ _id: req.params.id }, body)
 //     .then(() => {
-//       return res.status(200).json({ seccess: true });
+//       return res.status(200).json({ : true });
 //     })
 //     .catch((error) => {
 //       return res.status(400).json({
@@ -106,7 +106,7 @@ const updateProduct = async (req, res) => {
 //             return res.status(400).json({ success: false, error: err })
 //         }
 //         if (!product) {
-//             return res.statuse(404).json({ success: false, error: err })
+//             return res.status(404).json({ success: false, error: err })
 //         }
 //         return res.status(200).json({ success: true, date: product })
 //     }).catch(err => console.log(err))
