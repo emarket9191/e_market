@@ -89,11 +89,9 @@ deleteShop = async (req, res) => {
       _id: req.params.id,
     }).exec();
     if (!shop) {
-      return res
-        .status(404)
-        .json({ success: false, error: "shop not found" });
+      return res.status(404).json({ success: false, error: "shop not found" });
     }
-    return res.status(200).json({ success: true, data: shop});
+    return res.status(200).json({ success: true, data: shop });
   } catch (error) {
     console.log(error);
     return res.status(400).json({ success: false, error: err });
@@ -103,13 +101,11 @@ deleteShop = async (req, res) => {
 getShopById = async (req, res) => {
   try {
     const shop = await Shop.findOne({ _id: req.params.id }).exec();
-    if (!shop ) {
-      return res
-        .status(404)
-        .json({ success: false, error: "shop not found" });
+    if (!shop) {
+      return res.status(404).json({ success: false, error: "shop not found" });
     }
-    
-    return res.status(200).json({ success: true, data: shop});
+
+    return res.status(200).json({ success: true, data: shop });
   } catch (error) {
     console.error(error);
     return res.status(400).json({ success: false, error: error });
@@ -120,5 +116,5 @@ module.exports = {
   getAllShop,
   updateShop,
   deleteShop,
-  getShopById
+  getShopById,
 };

@@ -35,7 +35,7 @@ app.use(express.static(path.resolve(__dirname, "client/build")));
 app.use('/', indexRouter);
 app.use('/api/user', userRouter);
 app.use('/api/shop', shopRouter);
-app.use("/api",productRouter);
+app.use("/api/product",productRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
