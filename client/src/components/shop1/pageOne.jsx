@@ -3,7 +3,7 @@ import React from "react";
 import Input from "../shop-page2/input"
 import DescriptionTextField from "../shop1/TextFile"
 import "../shop1/pageOne.css"
-
+import NestedGrid from "./category"
 function pageOne() {
   return (
     <div>
@@ -26,7 +26,8 @@ function pageOne() {
         <div className="Categories">
          <div id="boxed">
            <div id="anotherbox">
-             <input type="button" value="inside" />  
+             {/* <input type="button" value="inside" />   */}
+             <NestedGrid/>
            </div>
          </div>
          
