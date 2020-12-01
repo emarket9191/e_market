@@ -8,16 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Shop Details</h1>
-      <div className='page2'>
-        <Input name={`shop name`} />
-        <Input name={`shop fax`} />
-        <Input name={`shop country`} />
-        <Input name={`shop city`} />
-        <Input name={`shop zip code`} />
-        <Input name={`business address`} />
-        <Input name={`business number`} />
-      </div>
+      
     </div>
   );
 }
