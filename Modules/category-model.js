@@ -8,6 +8,13 @@ const category = new schema(
   },
   { timestamps: true }
 );
+category.virtual("products", {
+  ref: "product",
+  localField: "_id",
+  foreignField: "product_id",
+  justOne: false,
+})
+
 
 
 
