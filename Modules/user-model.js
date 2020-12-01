@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const validator = require("validator");
 const schema = mongoose.Schema
 const ObjectId = require('mongoose').Types.ObjectId;
 const user = new schema(
@@ -11,10 +12,10 @@ const user = new schema(
     profileImage : { type: String,required: true},
     business_name :{type:String,required:true},
     password :{type:String,required:true},
-    email: {
+  /*   email: {
         type: String,
-        required: true}
-    /*email: {
+        required: true} */
+    email: {
         type: String,
         required: true,
         unique: true,
@@ -26,7 +27,7 @@ const user = new schema(
         },
       },
       
-*/
+
 },
 {timestamps:true},
 
