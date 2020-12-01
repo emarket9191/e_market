@@ -22,11 +22,11 @@ const product = new schema(
   { timestamps: true }
 );
 
-// product.virtual("shops", {
-//   ref: "shop",
-//   localField: "_id",
-//   foreignField: "shop_id",
-//   justOne: false,
-// });
+product.virtual("categories", {
+  ref: "category",
+  localField: "_id",
+  foreignField: "category_id",
+  justOne: false,
+});
 
 module.exports = mongoose.model("products", product);
