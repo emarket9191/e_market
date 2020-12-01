@@ -1,14 +1,7 @@
-/* .images{
-    display: flex;
-    justify-content:flex-end
-} */
-/* .input{
-    display: flex;
-    justify-content:center
-} */
+
 .shop2container{
-    display: inline-flex;
-    justify-content: center;
+    display: flex;
+    justify-content: space-around;
 }
 .shipping{
     display: inline;
@@ -16,3 +9,19 @@
 #span{
     margin-right: 10%;
 }
+.color{
+    display: flex;
+    justify-content: right;
+}
+.right{
+    display: flex;
+    justify-content: right;
+}
+.input{
+    display: flex;
+    justify-content: right;
+}
+/* .bottom{
+    display: flex;
+    justify-content: end;
+} */

@@ -1,5 +1,5 @@
 const Shop = require("../modules/shop-model");
-createShop = (req, res) => {
+const createShop = (req, res) => {
   const body = req.body;
 
   if (!body) {
@@ -31,7 +31,7 @@ createShop = (req, res) => {
       });
     });
 };
-getAllShop = async (req, res) => {
+const getAllShop = async (req, res) => {
   try {
     const shops = await Shop.find({}).exec();
 
@@ -48,7 +48,7 @@ getAllShop = async (req, res) => {
   }
 };
 
-updateShop = async (req, res) => {
+const updateShop = async (req, res) => {
   const body = req.body;
   if (!body) {
     return res.status(400).json({
@@ -83,7 +83,7 @@ updateShop = async (req, res) => {
   }
 };
 
-deleteShop = async (req, res) => {
+const deleteShop = async (req, res) => {
   try {
     const shop = await Shop.findOneAndDelete({
       _id: req.params.id,
@@ -98,7 +98,7 @@ deleteShop = async (req, res) => {
   }
 };
 
-getShopById = async (req, res) => {
+const getShopById = async (req, res) => {
   try {
     const shop = await Shop.findOne({ _id: req.params.id }).exec();
     if (!shop) {

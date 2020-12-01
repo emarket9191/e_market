@@ -1,13 +1,21 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
+import React from 'react';
+import { SketchPicker } from 'react-color';
 
-export default theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: purple[500],
-    },
-    secondary: {
-      main: '#f44336',
-    },
-  },
-});
+export default class Color extends React.Component {
+  state = {
+    background: '#fff',
+  };
+
+  handleChangeComplete = (color) => {
+    this.setState({ background: color.hex });
+  };
+
+  render() {
+    return (
+      <SketchPicker
+        color={ this.state.background }
+        onChangeComplete={ this.handleChangeComplete }
+      />
+    );
+  }
+}
