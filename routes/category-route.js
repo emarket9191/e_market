@@ -8,3 +8,5 @@ router.get('/', categoryCtrl.getAllCategories)
 router.put('/:id', categoryCtrl.updateCategory)
 router.delete('/:id',categoryCtrl.deleteCategory)
 router.get('/:id', categoryCtrl.getCategoryById)
+
+module.exports = router; 

@@ -1,4 +1,5 @@
 const Category = require("../Modules/category-model");
+
 const createCategory = (req, res) => {
     const body = req.body;
   
@@ -92,7 +93,7 @@ const createCategory = (req, res) => {
     try {
       const categories = await Category.find({}).exec();
   
-      if (!shops.categories ) {
+      if (!categories.length ) {
         return res
           .status(404)
           .json({ success: false, error: "not a single category was found" });
