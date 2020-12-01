@@ -164,8 +164,16 @@ export default function ProductTable({ controls }) {
                     {column.label}
                   </StyledTableCell>
                 ))}
-                <TableCell />
-                <TableCell />
+                <StyledTableCell
+                   
+                  >
+                   Edit
+                  </StyledTableCell>
+                  <StyledTableCell
+                  
+                  >
+                   Delete
+                  </StyledTableCell>
               </TableRow>
             </TableHead>
             <TableBody>
