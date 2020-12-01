@@ -11,14 +11,15 @@ function App() {
 
   return (
     <>
+    <div className="App">
       <Router>
-        
         <Switch>
           {/* <Route path="/" exact component={Home} /> */}
           <Route path="/openShop" exact component={PageOne} />
           <Route path="/productManagement" exact component={ProductManagement} />
         </Switch>
       </Router>
+      </div>
     </>
   );
 }
