@@ -1,4 +1,18 @@
-Input{
+/* .images{
+    display: flex;
+    justify-content:flex-end
+} */
+/* .input{
+    display: flex;
+    justify-content:center
+} */
+.shop2container{
+    display: inline-flex;
+    justify-content: center;
+}
+.shipping{
     display: inline;
-    color: aqua;
+}
+#span{
+    margin-right: 10%;
 }
