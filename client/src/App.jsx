@@ -4,6 +4,7 @@ import PageOne from "./components/shop1/pageOne";
 import ProductManagement from "./ProductManagement/ProductManagement";
 import logo from "./logo.svg";
 import "./App.css";
+import addProduct1 from "./components/add-product1/pageOne"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           {/* <Route path="/" exact component={Home} /> */}
           <Route path="/openShop" exact component={PageOne} />
           <Route path="/productManagement" exact component={ProductManagement} />
+          <Route path="/addProduct1" exact component={addProduct1} />
         </Switch>
       </Router>
     </>
