@@ -26,6 +26,7 @@ th{
 }
 .ProductButtonContainer{
   margin-bottom: 1.5%;
+  display: inline-flex;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -71,9 +72,16 @@ th{
 .GreyButton{
   color:white !important;
   background-color: rgb(117, 114, 114) !important;
+  width:20%;
+  height:10%;
+}
+#gerybutton{
+  color:white !important;
 }
 #AddProductButton{
   margin-left:5%;
+  color:white !important;
+
 }
 @keyframes App-logo-spin {
   from {

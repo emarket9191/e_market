@@ -31,7 +31,22 @@ const createProduct = (req, res) => {
       });
     });
 };
+const getAllProducts = async (req, res) => {
+  try {
+    const product = await Product.find({}).exec();
 
+    if (!product.length) {
+      return res
+        .status(404)
+        .json({ success: false, error: "not a single product was found" });
+    }
+
+    return res.status(200).json({ success: true, data: product });
+  } catch (error) {
+    console.log("catch");
+    return res.status(400).json({ success: false, error: err });
+  }
+};
 const deleteProduct = async (req, res) => {
     try {
       const product = await Product.findOneAndDelete({
@@ -103,9 +118,30 @@ const getProductById = async (req, res) => {
   }
 };
 
+const getAllProducts = async (req, res) => {
+  try {
+   
+    const products = await Product.find({}).exec();
+    if (!products.length ) {
+      return res
+        .status(404)
+        .json({ success: false, error: "not a single product was found" });
+    }
+
+    return res.status(200).json({ success: true, data: products });
+  } catch (error) {
+   
+    return res.status(400).json({ success: false, error: err });
+  }
+};
+
+
+
 module.exports = {
   createProduct,
   deleteProduct,
   updateProduct,
   getProductById,
+  getAllProducts
+ 
 };

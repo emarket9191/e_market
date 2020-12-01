@@ -18,15 +18,11 @@ const product = new schema(
     submit_time: { type: String, required: true },
     pause_time: { type: String, required: true },
   },
+  
 
   { timestamps: true }
 );
 
-product.virtual("categories", {
-  ref: "category",
-  localField: "_id",
-  foreignField: "category_id",
-  justOne: false,
-});
+
 
 module.exports = mongoose.model("products", product);

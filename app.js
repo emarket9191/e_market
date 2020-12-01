@@ -8,7 +8,9 @@ var cors = require("cors");
 var indexRouter = require('./routes/index');
 var userRouter = require('./routes/user-route');
 var shopRouter = require ('./routes/shop-route');
-var productRouter = require("./routes/product-route");
+var productRouter = require('./routes/product-route');
+var categoryRouter = require('./routes/category-route');
+var searchRouter = require('./routes/search-route');
 
 var db = require("./DB/app");
 db.on("error", console.error.bind(console, "mongoDB connection error"));
@@ -35,7 +37,9 @@ app.use(express.static(path.resolve(__dirname, "client/build")));
 app.use('/', indexRouter);
 app.use('/api/user', userRouter);
 app.use('/api/shop', shopRouter);
-app.use("/api/product",productRouter);
+app.use('/api/product',productRouter);
+app.use('/api/category',categoryRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
