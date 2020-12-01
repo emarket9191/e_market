@@ -41,8 +41,9 @@ const useStyles = makeStyles((theme) => ({
       margin: 4,
     },
   }));
-export default function ProductManagement(){
+export default function ProductManagement() {
     const classes = useStyles();
+    const [controls, setControls] = React.useState({});
     return (
         <div>
             <h1 className="ProductManagementTitle">
@@ -57,6 +58,16 @@ export default function ProductManagement(){
         className={classes.input}
         placeholder="search product"
         inputProps={{ 'aria-label': 'search product' }}
+        value={controls.textSearch}
+        onChange={(e) => {
+          const textSearch =  e.target.value;
+          setControls(oldValue => {
+            return {
+              ...oldValue,
+              textSearch
+            };
+          })
+        }}
       />
     
       <Divider className={classes.divider} orientation="vertical" />
@@ -93,7 +104,7 @@ export default function ProductManagement(){
     </Button> 
             </div>
         <div className="ProductContainer">
-            <ProductTable/>
+            <ProductTable controls={controls} />
         </div>  
         </div>
     )
