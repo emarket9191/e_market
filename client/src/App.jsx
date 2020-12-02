@@ -11,30 +11,27 @@ import addProduct1 from "./components/add-product1/pageOne"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SignInSide from "./components/login/login"
 import AddProductTwo from "./components/add-product2/addProductTwo"
+import { StateContext, useStatesGlobal } from "./state"
+
 
 function App() {
-  const [users, setUsers] = useState([]);
-
   return (
+    <StateContext.Provider value={useStatesGlobal()}>
     <div className='App'>
       <Router>
         <Switch>
           {/* <Route path="/" exact component={Home} /> */}
-          <Route path="/openShop" exact component={PageOne} />
           <Route path="/addProduct1" exact component={addProduct1} />
           <Route path="/addProduct2" exact component={AddProductTwo} />
-
-          <Route
-            path="/productManagement"
-            exact
-            component={ProductManagement}
-          />
+          <Route path="/productManagement"exact component={ProductManagement}/>
+          <Route path="/openShop" exact component={PageOne} />
           <Route path="/openShop2" exact component={Container} />
           <Route path="/openShop3" exact component={Page3} />
           <Route path="/" exact component={SignInSide} />
         </Switch>
       </Router>
     </div>
+    </StateContext.Provider>
   );
 }
 export default App;
