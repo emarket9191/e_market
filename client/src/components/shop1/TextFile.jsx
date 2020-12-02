@@ -26,7 +26,7 @@ export default function DescriptionTextField() {
        
         <TextField
           id="outlined-multiline-static"
-          label="Shop Description.."
+          label="product Description.."
           multiline
           rows={4}
           defaultValue=""

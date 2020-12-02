@@ -23,7 +23,6 @@ const name=`${props.name}`
           id="outlined-size-small"
           variant="outlined"
           size="small"
-          
         />
       </div>
     </form>

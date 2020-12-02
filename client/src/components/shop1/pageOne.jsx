@@ -8,6 +8,26 @@ import {getAllCategories} from "../../api/index"
 
 export default function PageOne() {
   const [state,setState]=useState([]);
+  const [name,setName]= useState('');
+  const [logo,setLogo]= useState('');
+  const [description,setDescription]= useState('');
+  const [selected,setSelected]= useState();
+  
+  const nameChange = (event) => {
+    setName(event.target.value);
+  };
+  
+  const logoChange = (event) => {
+    setLogo(event.target.value);
+  };
+  
+  const descriptionChange = (event) => {
+    setDescription(event.target.value);
+  };
+  
+  const selectedChange = (event) => {
+    setSelected(event.target.value);
+  };
 const uploadAllCategory=async()=>{
   const response = await getAllCategories();
   const categoryArray = response.data.data;
@@ -24,12 +44,12 @@ const uploadAllCategory=async()=>{
       </div>
 
       <div className = "Input">
-        <Input name ={`Shop Name`}/>
-        <Input name ={`Shop Logo`}/>
+        <Input name ={`shop Name`} />
+        <Input name ={`shop Logo`}/>
       </div>
 
       <div>
-        <DescriptionTextField name ={`Shop Description`}/>
+        <DescriptionTextField name ={`shop Description`}/>
        
      </div>
      <div>
