@@ -68,23 +68,8 @@ export default function SignInSide() {
   const history = useHistory();
 
   const onSubmitLogin = async () => {
-    console.log("Hello world!");
-    // axios
-    //   .post(url, {
-    //     email: this.state.email,
-    //     password: this.state.password,
-    //   })
-    const check = await signin(email, password)
-      .then((res) => {
-        if (res.status === 200) {
-          console.log("signIn!!!");
-          history.push("/ad");
+          history.push("/openShop");
           window.location.reload();
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
    };
 
   return (
