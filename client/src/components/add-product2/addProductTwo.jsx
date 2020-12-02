@@ -9,7 +9,7 @@ import ContainedButtons from "./proceed-botton";
 import Box from "@material-ui/core/Box";
 import "./page2.css";
 
-function index() {
+export default function AddProductTwo() {
   return (
     <div className="shop2container">
       <div className="grid">
@@ -29,4 +29,3 @@ function index() {
     </div>
   );
 }
-export default index;

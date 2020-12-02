@@ -9,6 +9,7 @@ router.post('/', userCtrl.createUser)
  router.delete('/:id',userCtrl.deleteUser)
  router.put('/:id',userCtrl.updateUser)
  router.get('/:id', userCtrl.getUserById)
+ router.post('/auth', userCtrl.signin)
 // router.get('/name/:id',userCtrl.getCustomerById)
 // router.get('/:id',userCtrl.getLectureByCustomerId)
 module.exports = router;
