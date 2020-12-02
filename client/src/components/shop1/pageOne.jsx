@@ -4,7 +4,7 @@ import Input from "../shop-page2/input";
 import DescriptionTextField from "../shop1/TextFile";
 import "../shop1/pageOne.css";
 import NestedGrid from "./category";
-
+import {getAllCategories} from "../../api/index"
 
 export default function PageOne() {
   const [state,setState]=useState([]);
