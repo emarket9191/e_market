@@ -6,8 +6,10 @@ import ProductManagement from "./ProductManagement/ProductManagement";
 import Page3 from './components/page3/page3'
 import Login from './components/login/login'
 import logo from "./logo.svg";
- import "./App.css";
+import "./App.css";
+import addProduct1 from "./components/add-product1/pageOne"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SignInSide from "./components/login/login"
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -18,6 +20,7 @@ function App() {
         <Switch>
           {/* <Route path="/" exact component={Home} /> */}
           <Route path="/openShop" exact component={PageOne} />
+          <Route path="/addProduct1" exact component={addProduct1} />
           <Route
             path="/productManagement"
             exact
@@ -25,7 +28,7 @@ function App() {
           />
           <Route path="/openShop2" exact component={Container} />
           <Route path="/openShop3" exact component={Page3} />
-          <Route path="/" exact component={Login} />
+          <Route path="/" exact component={SignInSide} />
         </Switch>
       </Router>
     </div>

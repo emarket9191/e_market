@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
@@ -15,18 +15,17 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function NestedGrid(props) {
-  const [state,setState]=useState([]);
-
+export default function NestedGrid() {
   const classes = useStyles();
- 
-
+  
   function FormRow(props) {
     const category = props.name;
+    
     return (
       <React.Fragment>
         <Grid item xs={5}>
-          <button className={classes.paper}>{category}</button>          
+
+          <Paper className={classes.paper}>{category}</Paper>          
         </Grid>
       </React.Fragment>
     );
@@ -36,18 +35,15 @@ export default function NestedGrid(props) {
     <div className={classes.root}>
       <Grid container spacing={0}>
         <Grid container item xs={4} spacing={1}>
-        <FormRow name="food"/>
-        <Grid container item xs={4} spacing={1}>
-           <FormRow name="health"/>
-         </Grid>
-         
+           <FormRow name="food" color="black"/>
+          {/* <Card/> */}
          </Grid>
          <Grid container item xs={4} spacing={1}>
-           <FormRow name="fashion"/>
-          
+           <FormRow name="fashion" color="black"/>
+          {/* <Card/> */}
          <Grid container item xs={4} spacing={1}>
-           <FormRow name="health"/>
-      
+           <FormRow name="health" color="black"/>
+          {/* <Card/> */}
          </Grid>
         </Grid>
       </Grid>
