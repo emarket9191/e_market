@@ -4,6 +4,7 @@ import PageOne from "./components/shop1/pageOne";
 import Container from "./components/shop-page2/container";
 import ProductManagement from "./ProductManagement/ProductManagement";
 import Page3 from './components/page3/page3'
+import Login from './components/login/login'
 import logo from "./logo.svg";
  import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -24,6 +25,7 @@ function App() {
           />
           <Route path="/openShop2" exact component={Container} />
           <Route path="/openShop3" exact component={Page3} />
+          <Route path="/" exact component={Login} />
         </Switch>
       </Router>
     </div>
