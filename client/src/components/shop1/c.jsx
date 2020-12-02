@@ -1,24 +1,45 @@
-import React, { Component } from "react";
-import { getAllCategories } from "../api/index";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardMedia from '@material-ui/core/CardMedia';
+import { red } from '@material-ui/core/colors';
 
-export default function getCategories() {
-  state = {     
-    categories: [],
-  };
+const useStyles = makeStyles((theme) => ({
+  root: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 0,
+    paddingTop: '56.25%', // 16:9
+  },
+  expand: {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)',
+  },
+  avatar: {
+    backgroundColor: red[500],
+  },
+}));
 
- const getAll = getAllCategories
- console.log("************",getAllCategories);
-  render(); {
-    return (
-      <div className="">
-      {this.state.categories.map((category) => (
-        <div key={category.id}>
-          <p className="p">{category.category_name}</p>
-         </div>
-      ))}
-      
-    </div>
-    )
-   
-  }
+export default function RecipeReviewCard() {
+  const classes = useStyles();
+  return (
+    <Card className={classes.root}>
+      <CardHeader
+        title="Shrimp and Chorizo Paella"
+      />
+      <CardMedia
+        className={classes.media}
+        image="/static/images/cards/paella.jpg"
+        title="Paella dish"
+      />
+        </Card>
+  );
 }
