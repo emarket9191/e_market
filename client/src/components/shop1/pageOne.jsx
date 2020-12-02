@@ -1,15 +1,26 @@
-import React from "react";
- import IconLabelButtons from "./Button"
-import Input from "../shop-page2/input"
-import DescriptionTextField from "../shop1/TextFile"
-import "../shop1/pageOne.css"
-import NestedGrid from "./category"
-function pageOne() {
+import React, {useEffect, useState} from "react";
+ import IconLabelButtons from "./Button";
+import Input from "../shop-page2/input";
+import DescriptionTextField from "../shop1/TextFile";
+import "../shop1/pageOne.css";
+import NestedGrid from "./category";
+
+
+export default function PageOne() {
+  const [state,setState]=useState([]);
+const uploadAllCategory=async()=>{
+  const response = await getAllCategories();
+  const array =response.data.data;
+  setState(array);
+}
+  useEffect(()=>{
+    uploadAllCategory();
+  },[])
   return (
     <div>
 
       <div>
-      <h1>Open Shop 1</h1>
+      <h1>Create new shop.</h1>
       </div>
 
       <div className = "Input">
@@ -27,7 +38,7 @@ function pageOne() {
          <div id="boxed">
            <div id="anotherbox">
              {/* <input type="button" value="inside" />   */}
-             <NestedGrid/>
+             <NestedGrid />
            </div>
          </div>
          
@@ -42,4 +53,3 @@ function pageOne() {
   );
 }
 
-export default pageOne;

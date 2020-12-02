@@ -10,7 +10,7 @@ function App() {
   const [users, setUsers] = useState([]);
 
   return (
-    <>
+    <div className = "App">
       <Router>
         
         <Switch>
@@ -19,7 +19,7 @@ function App() {
           <Route path="/productManagement" exact component={ProductManagement} />
         </Switch>
       </Router>
-    </>
+    </div>
   );
 }
 export default App;

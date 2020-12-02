@@ -27,8 +27,11 @@ export const getAllProducts = () => api.get("/product");
 //   );
 
 // const apis = { getAllGuides, searchGuides,searchGuideById };
-const apis = {getAllProducts};
+
+const apis = {getAllProducts,
+};
 
 export default apis;
+
 
 

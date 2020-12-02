@@ -118,22 +118,6 @@ const getProductById = async (req, res) => {
   }
 };
 
-const getAllProducts = async (req, res) => {
-  try {
-   
-    const products = await Product.find({}).exec();
-    if (!products.length ) {
-      return res
-        .status(404)
-        .json({ success: false, error: "not a single product was found" });
-    }
-
-    return res.status(200).json({ success: true, data: products });
-  } catch (error) {
-   
-    return res.status(400).json({ success: false, error: err });
-  }
-};
 
 
 
