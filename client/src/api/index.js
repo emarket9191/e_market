@@ -14,6 +14,9 @@ const api = axios.create({
   baseURL: generateFullUrl() + "/api",
 });
 export const getAllProducts = () => api.get("/product");
+
+export const getAllCategories = () => api.get("/category");
+
 // export const searchGuideById = (id) => api.get(`guides/:${id}`);
 // export const searchGuides = (country, lang, city, cost, comments) =>
 //   api.get(
