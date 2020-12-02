@@ -1,0 +1,29 @@
+
+.shop2container{
+    display: flex;
+    /* justify-content: space-around; */
+    flex-direction: column;
+}
+.shipping{
+    display: inline;
+}
+#span{
+    margin-right: 10%;
+}
+.color{
+    display: flex;
+    justify-content: right;
+}
+.right{
+    display: flex;
+    justify-content: right;
+}
+.input{
+    display: flex;
+    justify-content: right;
+}
+.grid{
+        border: 2px solid blue;
+    border-radius: 205px;
+    margin: 50px;
+}
