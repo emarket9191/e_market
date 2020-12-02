@@ -10,14 +10,14 @@ export default function PageOne() {
   const [state,setState]=useState([]);
 const uploadAllCategory=async()=>{
   const response = await getAllCategories();
-  const array =response.data.data;
-  setState(array);
+  const categoryArray = response.data.data;
+  setState(categoryArray);
 }
   useEffect(()=>{
     uploadAllCategory();
   },[])
   return (
-    <div>
+    <div className = "papaDiv">
 
       <div>
       <h1>Create new shop.</h1>
@@ -38,7 +38,7 @@ const uploadAllCategory=async()=>{
          <div id="boxed">
            <div id="anotherbox">
              {/* <input type="button" value="inside" />   */}
-             <NestedGrid />
+             {state.length&&<NestedGrid array={state} />}
            </div>
          </div>
          
