@@ -5,6 +5,7 @@ import TradeTerms from "./tradeTerms";
 import Popover from "./popover";
 import Grid from "./grid";
 import Button from "../shop1/Button";
+import ContainedButtons from "./proceed-botton";
 import Box from "@material-ui/core/Box";
 import "./page2.css";
 
@@ -24,6 +25,7 @@ function index() {
         </div>
       </div>
       <Button />
+      <ContainedButtons />
     </div>
   );
 }
