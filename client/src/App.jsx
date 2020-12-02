@@ -10,6 +10,7 @@ import "./App.css";
 import addProduct1 from "./components/add-product1/pageOne"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SignInSide from "./components/login/login"
+import AddProductTwo from "./components/add-product2/addProductTwo"
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -21,6 +22,8 @@ function App() {
           {/* <Route path="/" exact component={Home} /> */}
           <Route path="/openShop" exact component={PageOne} />
           <Route path="/addProduct1" exact component={addProduct1} />
+          <Route path="/addProduct2" exact component={AddProductTwo} />
+
           <Route
             path="/productManagement"
             exact
