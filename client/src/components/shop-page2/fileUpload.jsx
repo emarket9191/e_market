@@ -1,10 +1,11 @@
 import React from "react";
+import Input from "./input";
 
 /**
  * Component to handle file upload. Works for image
  * uploads, but can be edited to work for any file.
  */
-function FileUpload() {
+export default function FileUpload() {
   // State to store uploaded file
   const [file, setFile] = React.useState("");
 
@@ -19,10 +20,10 @@ function FileUpload() {
   return (
     <div id="upload-box">
       <input type="file" onChange={handleUpload} />
-      <p>Filename: {file.name}</p>
+      {/* <p>Filename: {file.name}</p>
       <p>File type: {file.type}</p>
       <p>File size: {file.size} bytes</p>
-      {file && <ImageThumb image={file} />}
+      {file && <ImageThumb image={file} />} */}
     </div>
   );   
 }

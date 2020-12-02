@@ -7,6 +7,7 @@ import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 import TradeTerms from "./tradeTerms";
 import Popover from "./popover";
 import Box from "@material-ui/core/Box";
+import FileUpload from './fileUpload'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,13 +44,15 @@ export default function CenteredGrid() {
           <Input name={`shop country`} />
         </Grid>
         <Grid item xs={4}>
-          <Input name={`Add Header Image`} />
+          {/* <Input name={`Add Header Image`} /> */}
+          <FileUpload/>
         </Grid>
         <Grid item xs={7}>
           <Input name={`shop city`} />
         </Grid>
         <Grid item xs={4}>
-          <Input name={`Add bottom Image`} />
+          {/* <Input name={`Add bottom Image`} /> */}
+          <FileUpload/>
         </Grid>
         <Grid item xs={7}>
           <Input name={`shop zip code`} />
