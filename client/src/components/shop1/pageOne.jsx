@@ -5,6 +5,7 @@ import DescriptionTextField from "../shop1/TextFile";
 import "../shop1/pageOne.css";
 import NestedGrid from "./category";
 import {getAllCategories} from "../../api/index"
+import ContainedButtons from "../shop1/NextPageButton"
 
 export default function PageOne() {
   const [state,setState]=useState([]);
@@ -48,7 +49,10 @@ const uploadAllCategory=async()=>{
       <div className = "Buttons">
       <IconLabelButtons/>
       </div>
-      
+      <div className = "NextButton">
+      <ContainedButtons/>
+      </div>
+       
     </div>
   );
 }

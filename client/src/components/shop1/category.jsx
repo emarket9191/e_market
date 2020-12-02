@@ -31,7 +31,11 @@ export default function NestedGrid(props) {
       <React.Fragment>
         <Grid item xs={5}>
           {/* <button id = "categoryButton" type="button" class="btn btn-success">{category}</button>       */}
-          <button id = "categoryButton" type="button" class="btn btn-primary">{category}</button>    
+    
+          <div className={`category category-${category}`}>
+          <button id = "categoryButton" type="button" class="btn btn-primary">{category}</button>
+
+          </div>
         </Grid>
       </React.Fragment>
     );
