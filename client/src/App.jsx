@@ -8,6 +8,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import addProduct1 from "./components/add-product1/pageOne"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SignInSide from "./components/login/login"
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -26,6 +27,7 @@ function App() {
           />
           <Route path="/openShop2" exact component={Container} />
           <Route path="/openShop3" exact component={Page3} />
+          <Route path="/" exact component={SignInSide} />
         </Switch>
       </Router>
     </div>
