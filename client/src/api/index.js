@@ -14,6 +14,10 @@ const api = axios.create({
   baseURL: generateFullUrl() + "/api",
 });
 export const getAllProducts = () => api.get("/product");
+// export const signin = (email,password)=> api.post('/user/auth',(email,password));
+
+export const signin = (email,password)=> api.post('/user/auth', {email,password})
+
 // export const searchGuideById = (id) => api.get(`guides/:${id}`);
 // export const searchGuides = (country, lang, city, cost, comments) =>
 //   api.get(
@@ -27,7 +31,7 @@ export const getAllProducts = () => api.get("/product");
 //   );
 
 // const apis = { getAllGuides, searchGuides,searchGuideById };
-const apis = {getAllProducts};
+const apis = {getAllProducts,signin};
 
 export default apis;
 
