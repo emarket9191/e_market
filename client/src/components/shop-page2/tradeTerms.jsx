@@ -29,7 +29,7 @@ export default function NativeSelects() {
         <InputLabel htmlFor="age-native-simple"></InputLabel>
         <Select
           native
-          defaultValue='Trade Terms'
+         
           value={trade}
           onChange={handleChange}
           inputProps={{

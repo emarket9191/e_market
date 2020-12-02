@@ -1,7 +1,8 @@
 
 .shop2container{
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    flex-direction: column;
 }
 .shipping{
     display: inline;
@@ -20,6 +21,11 @@
 .input{
     display: flex;
     justify-content: right;
+}
+.grid{
+        border: 2px solid blue;
+    border-radius: 205px;
+    margin: 50px;
 }
 /* .bottom{
     display: flex;

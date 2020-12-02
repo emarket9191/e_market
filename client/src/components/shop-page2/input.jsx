@@ -23,7 +23,7 @@ const name=`${props.name}`
           id="outlined-size-small"
           variant="outlined"
           size="small"
-          required= 'true'
+          
         />
       </div>
     </form>
