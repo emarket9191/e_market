@@ -1,4 +1,5 @@
 const User = require("../modules/user-model");
+const auth = require('../Controllers/auth');
 createUser = (req, res) => {
     const body = req.body;
   
@@ -92,9 +93,42 @@ createUser = (req, res) => {
       return res.status(400).json({ success: false, error: error });
     }
   };
+  checkAuthentication = async (req, res) => {
+    // Search for a user by email
+    if (!req.body) {
+      return res
+        .status(400)
+        .json({ success: false, error: "Invalid login credentials" });
+    }
+    const user = await User.findOne({ email: req.body.email }).exec();
+    if (!user) {
+      return res
+        .status(400)
+        .json({ success: false, error: "Invalid login credentials" });
+    }
+  
+    if (req.body.password != user.password) {
+      return res.status(401).json({
+        success: false,
+        accessToken: null,
+        error: "Invalid login credentials",
+      });
+    }
+    return user;
+  };
+
+  signin = async (req, res) => {
+    const user = await checkAuthentication(req, res) ;
+    if (user) {
+        return true;
+    }
+
+  };
   module.exports = {
     createUser,
     deleteUser,
     updateUser,
-    getUserById
+    getUserById,
+    signin,
+    checkAuthentication
   };

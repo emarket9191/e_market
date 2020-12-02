@@ -11,7 +11,6 @@ var shopRouter = require ('./routes/shop-route');
 var productRouter = require('./routes/product-route');
 var categoryRouter = require('./routes/category-route');
 
-
 var db = require("./DB/app");
 db.on("error", console.error.bind(console, "mongoDB connection error"));
 var app = express();

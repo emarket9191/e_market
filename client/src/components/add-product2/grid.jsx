@@ -7,14 +7,12 @@ import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 import TradeTerms from "./tradeTerms";
 import Popover from "./popover";
 import Box from "@material-ui/core/Box";
-import FileUpload from './fileUpload'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.secondary,
   },
@@ -25,47 +23,36 @@ export default function CenteredGrid() {
 
   return (
     <div className={classes.root}>
-      <h1>Shop Details</h1>
+      <h1>Add Product 2</h1>
 
-      <Grid container spacing={3}>
+      <Grid container spacing={1}>
         <Grid item xs={7}>
-          <Input name={`shop name`} />
+          <Input name={`Package dimension`} />
         </Grid>
         <Grid item xs={4}>
-          <Popover text="Header color" />
+        <Input name={`+Add Product Image`} />
         </Grid>
         <Grid item xs={7}>
-          <Input name={`shop fax`} />
+          <Input name={`Package weight`} />
+        </Grid>
+        <Grid item xs={7}>
+          <Input name={`Price per unit`} />
         </Grid>
         <Grid item xs={4}>
-          <Popover text="Bottom color" />
+          <Input name={`+Add product collage`} />
         </Grid>
         <Grid item xs={7}>
-          <Input name={`shop country`} />
+          <Input name={`Unit in package`} />
+        </Grid>
+        <Grid item xs={7}>
+          <Input name={`Quantity in stock`} />
         </Grid>
         <Grid item xs={4}>
-          {/* <Input name={`Add Header Image`} /> */}
-          <FileUpload/>
+          <Input name={`Add bottom Image`} />
         </Grid>
         <Grid item xs={7}>
-          <Input name={`shop city`} />
+          <Input name={`Social media link`} />
         </Grid>
-        <Grid item xs={4}>
-          {/* <Input name={`Add bottom Image`} /> */}
-          <FileUpload/>
-        </Grid>
-        <Grid item xs={7}>
-          <Input name={`shop zip code`} />
-        </Grid>
-        <Grid item xs={7}>
-          <Input name={`business address`} />
-        </Grid>
-        <Grid item xs={7}>
-          <Input name={`business number`} />
-        </Grid>
-        {/* <Grid item xs={12}>
-          <Paper className={classes.paper}><Input/></Paper>
-        </Grid> */}
       </Grid>
     </div>
   );

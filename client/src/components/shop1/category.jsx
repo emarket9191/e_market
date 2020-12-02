@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Card from "./Card"
 
+
 const useStyles = makeStyles((theme) => ({
+  
   root: {
     flexGrow: 1
   },
@@ -15,15 +17,21 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function NestedGrid() {
+export default function NestedGrid(props) {
+  const [categories,setCategories]=useState([]);
+ useEffect(()=>{
+  setCategories(props.array)
+ },[])
   const classes = useStyles();
 
+   
   function FormRow(props) {
     const category = props.name;
     return (
       <React.Fragment>
         <Grid item xs={5}>
-          <Paper className={classes.paper}>{category}</Paper>          
+          {/* <button id = "categoryButton" type="button" class="btn btn-success">{category}</button>       */}
+          <button id = "categoryButton" type="button" class="btn btn-primary">{category}</button>    
         </Grid>
       </React.Fragment>
     );
@@ -32,18 +40,16 @@ export default function NestedGrid() {
   return (  
     <div className={classes.root}>
       <Grid container spacing={0}>
-        <Grid container item xs={4} spacing={1}>
-           <FormRow name="food" color="black"/>
-          {/* <Card/> */}
-         </Grid>
-         <Grid container item xs={4} spacing={1}>
-           <FormRow name="fashion" color="black"/>
-          {/* <Card/> */}
-         <Grid container item xs={4} spacing={1}>
-           <FormRow name="health" color="black"/>
-          {/* <Card/> */}
-         </Grid>
-        </Grid>
+      
+      {categories.map((category)=>
+               <Grid container item xs={4} spacing={1}>
+               <FormRow name={category.category_name}/>         
+              </Grid>
+            )}
+        {/* <Grid container item xs={4} spacing={1}>
+         <FormRow name="food"/>         
+        </Grid> */}
+        
       </Grid>
     </div>
   );
